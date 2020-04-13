@@ -1,6 +1,6 @@
-import log from 'utils/log'
 import * as core from '@actions/core'
 import * as github from '@actions/github'
+import log from "utils/log"
 
 export default function (): void {
 

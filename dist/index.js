@@ -28,7 +28,7 @@ function __spreadArrays() {
     return r;
 }
 
-var NAME = '[deploy-actino]';
+var NAME = '[funny-deploy]';
 var infoWrap = chalk.bold.green;
 var warnWrap = chalk.keyword('orange');
 var errorWrap = chalk.bold.red;

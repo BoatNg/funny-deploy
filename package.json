@@ -1,5 +1,5 @@
 {
-  "name": "deploy-action",
+  "name": "funny-deploy",
   "version": "1.0.0",
   "description": "deploy project by node action",
   "main": "dist/index.js",

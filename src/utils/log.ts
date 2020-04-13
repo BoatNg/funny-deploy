@@ -8,7 +8,7 @@ export interface Log {
   error(message: string | Error): void;
 
 }
-const NAME: string = '[deploy-actino]'
+const NAME: string = '[funny-deploy]'
 const infoWrap = chalk.bold.green
 const warnWrap = chalk.keyword('orange');
 const errorWrap = chalk.bold.red;

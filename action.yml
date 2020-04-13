@@ -1,0 +1,9 @@
+name: "deploy-action"
+description: "deploy project by node action"
+author: "BoatNg"
+runs:
+  using: "node12"
+  main: "dist/index.js"
+branding:
+  color: "blue"
+  icon: "mic"

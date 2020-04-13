@@ -1,7 +1,7 @@
 {
   "name": "deploy-action",
   "version": "1.0.0",
-  "description": "deploy project via node action",
+  "description": "deploy project by node action",
   "main": "dist/index.js",
   "scripts": {
     "build": "node_modules/.bin/rollup -c ./build/rollup.config.prod.js",

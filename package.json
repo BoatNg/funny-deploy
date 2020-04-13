@@ -1,0 +1,30 @@
+{
+  "name": "deploy-action",
+  "version": "1.0.0",
+  "description": "deploy project via node action",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "node_modules/.bin/rollup -c ./build/rollup.config.prod.js",
+    "dev": "node_modules/.bin/rollup -w -c ./build/rollup.config.dev.js"
+  },
+  "author": "BoatNg",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^2.6.1",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1",
+    "@rollup/plugin-alias": "^3.1.0",
+    "chalk": "^4.0.0",
+    "lodash": "^4.17.15",
+    "node-ssh": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=10.19.0"
+  }
+}

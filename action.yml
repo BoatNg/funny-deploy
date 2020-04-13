@@ -1,4 +1,4 @@
-name: "deploy-project"
+name: "funny-deploy"
 description: "deploy project by node action"
 author: "BoatNg"
 runs:

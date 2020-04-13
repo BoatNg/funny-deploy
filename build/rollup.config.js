@@ -15,7 +15,7 @@ module.exports = [
     input: resolveFile('src/index.ts'),
     output: {
       file: resolveFile('dist/index.js'),
-      format: 'iife',
+      format: 'cjs',
     },
     plugins: [
       typescript(),

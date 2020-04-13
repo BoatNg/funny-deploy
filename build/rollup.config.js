@@ -3,7 +3,8 @@ const buble = require('rollup-plugin-buble');
 const typescript = require('rollup-plugin-typescript');
 const alias = require('@rollup/plugin-alias')
 const resolve = require('@rollup/plugin-node-resolve')
-
+const commonjs = require('@rollup/plugin-commonjs')
+const json = require('@rollup/plugin-json')
 const resolveFile = function (filePath) {
   return path.join(__dirname, '..', filePath)
 }
@@ -19,14 +20,16 @@ module.exports = [
     },
     plugins: [
       typescript(),
-      resolve(),
+     
       alias({
         entries: [
           { find: 'utils', replacement: utilsPath },
           { find: '@', replacement: srcPath },
         ]
       }),
-      // buble(),
+      resolve(),
+      commonjs(),
+      json(),
     ],
   },
 ]

@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: BoatNg/deploy-action@v0
+      uses: BoatNg/funny-deploy@v0
       with:
         who-to-greet: 'Mona the Octocat'
     # Use the output from the `hello` step

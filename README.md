@@ -1,4 +1,4 @@
-# deploy-action
+# funny-deploy
 
 deploy your project to the server via ssh password
 
@@ -10,7 +10,7 @@ deploy your project to the server via ssh password
   * server's host. example `127.0.0.1`
   
 * REMOTE_PORT
-  * port of ssh listening in server side. default 22
+  * the port of ssh listening in server side. default `22`
 
 * REMOTE_USER [required]
   * sensitive information, you should creating and storing encrypted secrets in github. [how](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
@@ -22,7 +22,7 @@ deploy your project to the server via ssh password
   * the path where project deployed in server. it should be a absolute path. example: `/home/wwww/project-name`
 
 * SOURCE
-  * the directory which you want to deploying, it under the [GITHUB_WORKSPACE](https://help.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables). example: `dist/`. the default value is `""`.
+  * the directory which you want to deploy, it under the [GITHUB_WORKSPACE](https://help.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables). example: `dist/`. the default value is `""`.
 
 * example
   ```yml

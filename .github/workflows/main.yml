@@ -1,15 +1,19 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  deploy:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: deploy test
     steps:
-    - name: Hello world action step
-      id: hello
-      uses: BoatNg/funny-deploy@master
-      with:
-        who-to-greet: 'Mona the Octocat'
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: checkout
+        uses: actions/checkout@master
+
+      - name: deploy
+        id: funny-deploy
+        uses: BoatNg/funny-deploy@master
+        env:
+          REMOTE_HOST: "${{ secrets.REMOTE_HOST }}"
+          REMOTE_USER: "${{ secrets.REMOTE_USER }}"
+          REMOTE_PASSWORD: "${{ secrets.REMOTE_PASSWORD }}"
+          REMOTE_PATH: "/home/www/deploy-action"
+          SOURCE: "dist/"

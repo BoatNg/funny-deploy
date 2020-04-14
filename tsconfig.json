@@ -3,10 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
-      ],
-      "utils/*": [
-        "src/utils/*"
+        "src/*",
       ]
     },
     "module": "commonjs",

@@ -94,8 +94,6 @@ export default async function (): Promise<void> {
     // successs
     log.info(`🎉 success`)
     return Promise.resolve()
-    // let p = core.getState(pidName)
-    // process.kill(+p)
   } catch (err) {
     log.error(err)
     process.abort()

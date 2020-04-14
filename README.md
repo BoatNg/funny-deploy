@@ -22,7 +22,7 @@ deploy your project to the server via ssh password
   * the path where project deployed in server. it should be a absolute path. example: `/home/wwww/project-name`
 
 * SOURCE
-  * the directory which you want to deploy, it under the [GITHUB_WORKSPACE](https://help.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables). example: `dist/`. the default value is `""`.
+  * the directory which you want to deploy, it's in the [GITHUB_WORKSPACE](https://help.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables). example: `dist/`. the default value is `""`.
 
 * example
   ```yml

@@ -1,5 +1,5 @@
 name: "funny-deploy"
-description: "deploy project by node action"
+description: "deploy your project to the server via ssh password"
 author: "BoatNg"
 runs:
   using: "node12"

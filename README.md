@@ -33,16 +33,17 @@ deploy your project to the server via ssh password
       runs-on: ubuntu-latest
       name: deploy test
       steps:
-      - name: checkout
+        - name: checkout
+          uses: actions/checkout@master
 
-      - name: deploy dist
-        id: funny-deploy
-        uses: BoatNg/funny-deploy@master
-        env:
-          REMOTE_HOST: "${{ secrets.REMOTE_HOST }}"
-          REMOTE_USER: "${{ secrets.REMOTE_USER }}"
-          REMOTE_PASSWORD: "${{ secrets.REMOTE_PASSWORD }}"
-          REMOTE_PATH: "/home/www/deploy-action"
-          SOURCE: "dist/"
+        - name: deploy
+          id: funny-deploy
+          uses: BoatNg/funny-deploy@master
+          env:
+            REMOTE_HOST: "${{ secrets.REMOTE_HOST }}"
+            REMOTE_USER: "${{ secrets.REMOTE_USER }}"
+            REMOTE_PASSWORD: "${{ secrets.REMOTE_PASSWORD }}"
+            REMOTE_PATH: "/home/www/deploy-action"
+            SOURCE: "dist/"
 
   ```

@@ -90,9 +90,10 @@ export default async function (): Promise<void> {
       log.error(`transporting file to server failed`)
       return
     }
-    
+
     // successs
     log.info(`🎉 success`)
+    return Promise.resolve()
     // let p = core.getState(pidName)
     // process.kill(+p)
   } catch (err) {

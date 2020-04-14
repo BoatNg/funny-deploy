@@ -1,3 +1,9 @@
 import deploy from './deploy'
+import log from '@/utils/log'
 
-deploy()
+const res = deploy()
+res.then(()=>{
+  log.info('🚧 close process')
+  process.exitCode = 0
+  process.exit()
+})
